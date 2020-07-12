@@ -1,0 +1,14 @@
+.completed {
+    text-decoration: line-through;
+}
+
+.wrap{
+    height: 100vh;
+    background: linear-gradient(#4F7A7D,#44698F);
+}
+
+/* lineThrough */
+
+input:checked+p{
+    text-decoration: line-through;
+}
