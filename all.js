@@ -49,8 +49,6 @@ function removeTodo(e) {
 function removeAllTodo(e) {
     e.preventDefault(); // 刪除預設
     todoData = []; // 清空 todoData
-    // todoList.innerHTML=""; // 不知為何要加這行才行
-    // taskCount.textContent = todoData.length; // 不知為何要加這行才行
     render();
 }
 clearTask.addEventListener('click',removeAllTodo);
