@@ -17,7 +17,7 @@ function render() {
             </div>
             <button type="botton" class="btn btn-warning removeBtn" data-id="${key}">刪除</button>
         </li>
-        `;
+        `});
         todoList.innerHTML = string; // 將 todoList 這個 ul 插入 li 資料
 
         let remove = document.querySelectorAll(".removeBtn"); // All 因為 <li> 有很多個
@@ -25,7 +25,6 @@ function render() {
             item.addEventListener('click',removeTodo);
         });
         taskCount.textContent = todoData.length; // 還有 XX 筆任務
-    });
 }
 
 // 新增資料 updateTodo
@@ -50,8 +49,8 @@ function removeTodo(e) {
 function removeAllTodo(e) {
     e.preventDefault(); // 刪除預設
     todoData = []; // 清空 todoData
-    todoList.innerHTML=""; // 不知為何要加這行才行
-    taskCount.textContent = todoData.length; // 不知為何要加這行才行
+    // todoList.innerHTML=""; // 不知為何要加這行才行
+    // taskCount.textContent = todoData.length; // 不知為何要加這行才行
     render();
 }
 clearTask.addEventListener('click',removeAllTodo);
